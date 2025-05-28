@@ -1,23 +1,243 @@
-<div style="max-height:1000px;font-family:Cursive;font-size:40pt;color:red;">
-<marquee style="position:relative;left:122px;top:0px;height:397px;" scrollamount="6" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:8px;top:-397px;height:175px;" scrollamount="4" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:151px;top:-550px;height:235px;" scrollamount="5" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:51px;top:-735px;height:161px;" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:124px;top:-961px;height:337px;" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:122px;top:-1213px;height:397px;" scrollamount="7" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:55px;top:-1691px;height:231px;" scrollamount="5" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:98px;top:-1900px;height:127px;" scrollamount="6" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:93px;top:-2100px;height:355px;" scrollamount="1" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:279px;top:-2504px;height:475px;" scrollamount="4" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:185px;top:-2907px;height:373px;" scrollamount="1" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:140px;top:-3200px;height:296px;" scrollamount="7" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:26px;top:-3500px;height:300px;" scrollamount="3" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:22px;top:-3800px;height:253px;" scrollamount="6" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:211px;top:-4040px;height:325px;" scrollamount="7" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:203px;top:-4400px;height:481px;" scrollamount="5" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:107px;top:-4900px;height:330px;" scrollamount="2" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:132px;top:-5205px;height:331px;" scrollamount="5" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:57px;top:-5500px;height:94px;" scrollamount="5" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:5px;top:-5600px;height:471px;" direction="down">TARRL...</marquee>
-<marquee style="position:relative;left:317px;top:-6003px;height:480px;" scrollamount="5" direction="down">TARRL...</marquee>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE TULUNAD AMATEUR RADIO RELAY LEAGUE</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      font-family: Verdana, sans-serif;
+      background: url('https://media.istockphoto.com/id/1369365709/photo/ham-radio.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    header {
+      background: rgba(17, 17, 17, 0.9);
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo { max-height: 60px; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem;
+    }
+
+    nav a:hover { color: #e63946; }
+
+    .section {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .section.dark {
+      background: rgba(34, 34, 34, 0.9);
+      color: #f7f7f7;
+    }
+
+    .section h2 {
+      margin-bottom: 1rem;
+      color: #e63946;
+    }
+
+    button, .button {
+      padding: 0.7rem 1.2rem;
+      margin: 0.5rem 0;
+      border: none;
+      background: #e63946;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+    }
+
+    form input, form textarea {
+      padding: 0.75rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .membership-message {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      border-radius: 5px;
+    }
+
+    .board-photos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .board-photos div {
+      max-width: 180px;
+    }
+
+    .board-photos img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #999;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info {
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: #e63946;
+      text-decoration: none;
+      display: block;
+      margin: 4px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(17, 17, 17, 0.9);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.ibb.co/Cs1DYJZp/tarrl-logo.png" alt="TARRL Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#login">Login/Register</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#board">Board</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#archives">Archives</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section">
+    <h1 style="text-align: center; color: #e63946;">THE TULUNAD AMATEUR RADIO RELAY LEAGUE</h1>
+  </section>
+
+  <section id="login" class="section">
+    <h2>Join or Register</h2>
+    <p>Become a part of TARRL — your HAM voice across the coast!</p>
+    <button onclick="showMembership()">Register</button>
+    <button onclick="alert('Redirecting to login...')">Login</button>
+    <div id="membershipSection" class="membership-message" style="display: none;">
+      <strong>Notice:</strong> Membership registration is currently under maintenance. Please check back soon.
+    </div>
+  </section>
+
+  <section id="members" class="section">
+    <h2>Our Members</h2>
+    <p>Join a network of passionate HAM operators committed to emergency service, experimentation, and community spirit.</p>
+  </section>
+
+  <section id="board" class="section dark">
+    <h2>Board of Directors</h2>
+    <p>Leadership that empowers and connects — our TARRL board members.</p>
+    <div class="board-photos">
+      <div>
+        <img src="https://cdn-bio.qrz.com/z/vu3efz/photo_2024_04_14_13_10_04_jpeg.jpg" alt="Ms. Neil Bruce">
+        <p><strong>Ms. Neil Bruce (VU3EFZ)</strong><br>Managing Trustee & Legal Advisor</p>
+      </div>
+      <div>
+        <img src="https://cdn-bio.qrz.com/w/vu3xuw/IMG_20250511_101243_1_.jpg" alt="Mr H Gopalakrishna Prabhu">
+        <p><strong>Mr H Gopalakrishna Prabhu (VU3XUW)</strong><br>Treasurer & Trustee, TARRL</p>
+      </div>
+      <div>
+        <img src="https://cdn-bio.qrz.com/l/vu3znl/IMG_20240827_224019_350.jpg" alt="Vaibhav V K Naik">
+        <p><strong>VAIBHAV V K NAIK (VU3ZNL)</strong><br>President, TARRL</p>
+      </div>
+      <div>
+        <img src="https://ibb.co/YBdky8TThttps://ibb.co/YBdky8TT" alt="Jeevan Mathew">
+        <p><strong>Jeevan Mathew</strong><br>Interim Secretary, TARRL</p>
+      </div>
+      <div>
+        <img src="https://cdn-bio.qrz.com/e/vu3zne/Screenshot_2024_01_30_164444.png" alt="Mr Parth Darade">
+        <p><strong>Mr Parth Darade (VU3ZNE)</strong><br>Board Member & E&TW Assistant</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="activities" class="section">
+    <h2>Activities & Be a HAM</h2>
+    <p>Explore our events: field operations, drills, VHF foxhunts, and educational workshops. Join the next generation of HAMs!</p>
+    <a href="https://drive.google.com/drive/folders/1Crw6603cVk3owH9xMmRudkaIkxgh_1cZ?usp=drive_link" target="_blank">
+      <button>Access TARRL Public Directory</button>
+    </a>
+  </section>
+
+  <section id="archives" class="section dark">
+    <h2>TARRL Archives</h2>
+    <p>Explore our legacy — newsletters, callsign logs, and milestone events await in the TARRL Archive collection.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>TARRL (Tulunadu Amateur Radio Relay League)</strong></p>
+      <p>Shri Devaki Krishna House, Kemminje Koornadaka, Darbe, Puttur - 574202</p>
+      <p>Phone: 9164120217</p>
+      <p>Email Contacts:</p>
+      <a href="mailto:custodian@tarrltulunadu.in">Custodian: custodian@tarrltulunadu.in
+      / tarrltulunadu@gmail.com</a>
+      <a href="mailto:presi@tarrltulunadu.in">President: presi@tarrltulunadu.in  / tarrltulunadu@gmail.com </a>
+      <a href="mailto:treasurer@tarrltulunadu.in">Treasurer: treasurer@tarrltulunadu.in</a>
+      <a href="mailto:legal@tarrltulunadu.in">Legal Advisor: legal@tarrltulunadu.in  / tarrltulunadu@gmail.com</a>
+      <a href="mailto:boardmemb@tarrltulunadu.in">Board Members: boardmemb@tarrltulunadu.in</a>
+      <p>Socials:</p>
+      <a href="https://fb.com/share/1VY42Nf6yL" target="_blank">Facebook</a>
+      <a href="https://instagram.com/tarrl_tulunad" target="_blank">Instagram</a>
+      <a href="https://x.com/tarrltulunadu" target="_blank">Twitter/X</a>
+      <a href="https://t.me/tarrl_tulunadu" target="_blank">Telegram</a>
+      <a href="https://youtube.com/@tarrl_tulunadu" target="_blank">YouTube</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 TARRL - Tulunadu Amateur Radio Relay League. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showMembership() {
+      document.getElementById("membershipSection").style.display = "block";
+    }
+  </script>
+</body>
+</html>
