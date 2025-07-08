@@ -44,8 +44,12 @@
     }
 
     .logo {
-      max-height: 60px;
-    }
+  width: 30vw;        /* Scales based on screen width */
+  max-width: 200px;   /* Prevents it from getting too big on large screens */
+  min-width: 100px;   /* Prevents it from shrinking too small */
+  height: auto;       /* Keeps aspect ratio */
+}
+  
 
     .nav-links {
       display: none;
@@ -211,6 +215,12 @@
         color: #e63946;
       }
     }
+
+    @media (max-width: 480px) {
+  .logo {
+    width: 40vw;
+  }
+}
 
     @media (max-width: 768px) {
       .section {
