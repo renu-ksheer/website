@@ -174,24 +174,37 @@
     }
 
     @media (min-width: 769px) {
+  .top-bar {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
       .menu-toggle {
-        display: none;
-      }
+    display: none;
+  }
 
       .nav-links {
-        position: static;
-        display: flex !important;
-        flex-direction: row;
-        justify-content: flex-end;
-        background: transparent;
-        padding: 0;
-        margin-top: 1rem;
-      }
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    background: transparent;
+    padding: 0;
+    width: 100%;
+  }
 
-      .nav-links a {
-        background: none;
-        color: white;
-      }
+      .nav-links li {
+    list-style: none;
+  }
+
+   .nav-links a {
+    color: white;
+    background: none;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
 
       .nav-links a:hover {
         background: none;
