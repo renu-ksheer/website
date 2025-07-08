@@ -19,52 +19,66 @@
     }
 
     header.mobile-header {
+      background: rgba(17, 17, 17, 0.9);
+      padding: 1rem;
+      position: relative;
+    }
+
+    .top-bar {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 1rem;
-      background: rgba(17, 17, 17, 0.9);
-      flex-wrap: wrap;
+      justify-content: center;
       position: relative;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      left: 0;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      background: #e63946;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      z-index: 1001;
     }
 
     .logo {
       max-height: 60px;
-      margin: 0 auto;
-      display: block;
-    }
-
-    .menu-toggle {
-      font-size: 1.5rem;
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      background: #e63946;
-      color: #fff;
-      border-radius: 4px;
-      display: none;
-    }
-
-    .spacer {
-      width: 40px;
     }
 
     .nav-links {
-      list-style: none;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(0, 0, 0, 0.95);
+      width: 220px;
+      padding: 1rem;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 1000;
+    }
+
+    .nav-links.active {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: flex-end;
+    }
+
+    .nav-links li {
+      list-style: none;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      display: block;
       padding: 0.5rem;
+      border-radius: 4px;
     }
 
     .nav-links a:hover {
-      color: #e63946;
+      background: #e63946;
     }
 
     .section {
@@ -159,50 +173,41 @@
       color: #fff;
     }
 
-    @media (max-width: 768px) {
-      header.mobile-header {
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-      }
-
+    @media (min-width: 769px) {
       .menu-toggle {
-        display: block;
-        position: absolute;
-        left: 1rem;
-        top: 1rem;
-        transform: translateY(0%);
-        z-index: 1000;
+        display: none;
       }
 
       .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 1rem;
-        margin-top: 3.5rem;
-        align-items: center;
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        background: transparent;
+        padding: 0;
+        margin-top: 1rem;
       }
 
-      .nav-links.active {
-        display: flex;
+      .nav-links a {
+        background: none;
+        color: white;
       }
 
-      .nav-links li {
-        margin-bottom: 0.5rem;
+      .nav-links a:hover {
+        background: none;
+        color: #e63946;
       }
+    }
 
+    @media (max-width: 768px) {
       .section {
         padding: 1.5rem 3%;
       }
 
-      .logo {
-        margin: 0 auto;
+      .board-photos img {
+        height: 120px;
       }
-    }
 
-    @media (max-width: 480px) {
       h1 {
         font-size: 1.5rem;
       }
@@ -210,34 +215,24 @@
       h2 {
         font-size: 1.25rem;
       }
-
-      button {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-      }
-
-      .board-photos img {
-        height: 120px;
-      }
     }
   </style>
 </head>
 <body>
 
   <header class="mobile-header">
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <img src="tarrl-logo.png" alt="TARRL Logo" class="logo">
-    <div class="spacer"></div>
-    <nav>
-      <ul id="nav-links" class="nav-links">
-        <li><a href="#login">Login/Register</a></li>
-        <li><a href="#members">Members</a></li>
-        <li><a href="#board">Board</a></li>
-        <li><a href="#activities">Activities</a></li>
-        <li><a href="#archives">Archives</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="top-bar">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <img src="tarrl-logo.png" alt="TARRL Logo" class="logo">
+    </div>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="#login">Login/Register</a></li>
+      <li><a href="#members">Members</a></li>
+      <li><a href="#board">Board</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#archives">Archives</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </header>
 
   <section class="section">
