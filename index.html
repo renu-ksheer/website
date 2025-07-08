@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>THE TULUNAD AMATEUR RADIO RELAY LEAGUE</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body, html {
       font-family: Verdana, sans-serif;
       background: url('https://media.istockphoto.com/id/1369365709/photo/ham-radio.jpg') no-repeat center center fixed;
@@ -23,26 +28,46 @@
       align-items: center;
     }
 
-    .logo { max-height: 60px; }
+    .logo {
+      max-height: 60px;
+    }
 
-    nav ul {
+    nav {
+      flex: 1;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      background: #e63946;
+      color: #fff;
+      border-radius: 4px;
+      margin-left: auto;
+    }
+
+    .nav-links {
       list-style: none;
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      justify-content: flex-end;
     }
 
-    nav a {
+    .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       padding: 0.5rem;
     }
 
-    nav a:hover { color: #e63946; }
+    .nav-links a:hover {
+      color: #e63946;
+    }
 
     .section {
-      padding: 2rem;
+      padding: 2rem 5%;
       background: rgba(255, 255, 255, 0.9);
     }
 
@@ -72,6 +97,7 @@
       flex-direction: column;
       gap: 1rem;
       max-width: 500px;
+      width: 100%;
     }
 
     form input, form textarea {
@@ -99,10 +125,12 @@
 
     .board-photos div {
       max-width: 180px;
+      flex: 1 1 120px;
     }
 
     .board-photos img {
-      width: 150px;
+      width: 100%;
+      max-width: 150px;
       height: 150px;
       object-fit: cover;
       border-radius: 10px;
@@ -120,6 +148,7 @@
       text-decoration: none;
       display: block;
       margin: 4px 0;
+      word-wrap: break-word;
     }
 
     footer {
@@ -130,15 +159,68 @@
     }
 
     @media (max-width: 768px) {
-      nav ul { flex-direction: column; align-items: flex-start; }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo {
+        margin-bottom: 0.5rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .section {
+        padding: 1.5rem 3%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .board-photos img {
+        height: 120px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <img src="https://i.ibb.co/Cs1DYJZp/tarrl-logo.png" alt="TARRL Logo" class="logo">
     <nav>
-      <ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul id="nav-links" class="nav-links">
         <li><a href="#login">Login/Register</a></li>
         <li><a href="#members">Members</a></li>
         <li><a href="#board">Board</a></li>
@@ -185,7 +267,6 @@
         <p><strong>VAIBHAV V K NAIK (VU3ZNL)</strong><br>President, TARRL</p>
       </div>
       <div>
-        <!-- <img src="https://ibb.co/YBdky8TThttps://ibb.co/YBdky8TT" alt="Jeevan Mathew"> -->
         <img src="jeevan.jpg" alt="Jeevan Mathew">
         <p><strong>Jeevan Mathew</strong><br>Interim Secretary, TARRL</p>
       </div>
@@ -216,11 +297,10 @@
       <p>Shri Devaki Krishna House, Kemminje Koornadaka, Darbe, Puttur - 574202</p>
       <p>Phone: 9164120217</p>
       <p>Email Contacts:</p>
-      <a href="mailto:custodian@tarrltulunadu.in">Custodian: custodian@tarrltulunadu.in
-      / tarrltulunadu@gmail.com</a>
-      <a href="mailto:presi@tarrltulunadu.in">President: presi@tarrltulunadu.in  / tarrltulunadu@gmail.com </a>
+      <a href="mailto:custodian@tarrltulunadu.in">Custodian: custodian@tarrltulunadu.in / tarrltulunadu@gmail.com</a>
+      <a href="mailto:presi@tarrltulunadu.in">President: presi@tarrltulunadu.in / tarrltulunadu@gmail.com </a>
       <a href="mailto:treasurer@tarrltulunadu.in">Treasurer: treasurer@tarrltulunadu.in</a>
-      <a href="mailto:legal@tarrltulunadu.in">Legal Advisor: legal@tarrltulunadu.in  / tarrltulunadu@gmail.com</a>
+      <a href="mailto:legal@tarrltulunadu.in">Legal Advisor: legal@tarrltulunadu.in / tarrltulunadu@gmail.com</a>
       <a href="mailto:boardmemb@tarrltulunadu.in">Board Members: boardmemb@tarrltulunadu.in</a>
       <p>Socials:</p>
       <a href="https://fb.com/share/1VY42Nf6yL" target="_blank">Facebook</a>
@@ -239,6 +319,11 @@
     function showMembership() {
       document.getElementById("membershipSection").style.display = "block";
     }
+
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("active");
+    }
   </script>
+
 </body>
 </html>
