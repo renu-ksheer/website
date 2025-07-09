@@ -349,7 +349,7 @@
   <!-- Text on the left -->
   <div style="flex: 1; min-width: 250px;">
     <p style="color: #333; font-size: 1rem; line-height: 1.6;">
-      We are pleased to announce that the club has received official permission to conduct an Amateur Radio Demonstration as part of <strong>Philo Prathiba</strong> and <strong>JOTA-JOTI 2025</strong>.<br><br>
+      📌We are pleased to announce that the club has received official permission to conduct an Amateur Radio Demonstration as part of <strong>Philo Prathiba</strong> and <strong>JOTA-JOTI 2025</strong>.<br><br>
       Join us to explore the exciting world of ham radio and experience live demonstrations!
     </p>
   </div>
@@ -359,17 +359,18 @@
   <a href="https://renu-ksheer.github.io/files/aug25.html" target="_blank">
     <img src="thumb.jpg" alt="Event Flyer"
          style="width: 150px; border-radius: 8px; transition: 0.3s; display: block;">
-    <span style="
-      position: absolute;
-      bottom: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.6);
-      color: white;
-      padding: 4px 8px;
-      font-size: 0.9rem;
-      border-radius: 4px;
-    ">Click to view</span>
+<span style="
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  white-space: nowrap; /* ✅ Prevents line break */
+">view</span>
   </a>
 </div>
 
@@ -378,59 +379,72 @@
   <br>
 <hr style="border: none; height: 2px; background: #00bfff; margin: 1.5rem 0;">
 
-<h4>📍APRS Wx stations on air !  </h4> <br>
+<h4>📌APRS Wx stations on air !  </h4> <br>
 
-<div style="display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
+<div style="
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+">
 
-  <!-- Text (left side) -->
-  <div style="flex: 1; min-width: 250px;">
-    <p style="color: #333; font-size: 1rem; line-height: 1.6;">
-      🌈 Vital and Puttur Wx Stations got <strong>on air</strong> 🚨
-    </p>
-  </div>
+  <!-- Flex layout inside the card -->
+  <div style="display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
 
-  <!-- Thumbnails (right side) -->
-  <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-end;">
-    <!-- Thumbnail 1 -->
-    <div style="position: relative; flex-shrink: 0;">
-      <a href="https://aprs.fi/#!z=11&call=a%2FVU3ZNL-13&timerange=3600&tail=3600" target="_blank">
-        <img src="znl_aprs.jpg" alt="znlAprs"
-             style="width: 150px; border-radius: 8px; transition: 0.3s; display: block;">
-        <span style="
-          position: absolute;
-          bottom: 8px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: rgba(0, 0, 0, 0.6);
-          color: white;
-          padding: 4px 8px;
-          font-size: 0.8rem;
-          border-radius: 4px;
-          white-space: nowrap;
-        ">VU3ZNL-13</span>
-      </a>
+    <!-- Text on the left -->
+    <div style="flex: 1; min-width: 250px;">
+      <p style="color: #333; font-size: 1rem; line-height: 1.6;">
+        🌈 Vital and Puttur Wx Stations got <strong>on air</strong> 🚨
+      </p>
     </div>
 
-    <!-- Thumbnail 2 -->
-    <div style="position: relative; flex-shrink: 0;">
-      <a href="https://aprs.fi/#!z=11&call=a%2FVU3XUW-13&timerange=3600&tail=3600" target="_blank">
-        <img src="xuw_aprs.jpg" alt="xuwAprs"
-             style="width: 150px; border-radius: 8px; transition: 0.3s; display: block;">
-        <span style="
-          position: absolute;
-          bottom: 8px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: rgba(0, 0, 0, 0.6);
-          color: white;
-          padding: 4px 8px;
-          font-size: 0.8rem;
-          border-radius: 4px;
-          white-space: nowrap;
-        ">VU3XUW-13</span>
-      </a>
+    <!-- Thumbnails on the right -->
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-end;">
+      <!-- Thumbnail 1 -->
+      <div style="position: relative; flex-shrink: 0;">
+        <a href="https://aprs.fi/#!z=11&call=a%2FVU3ZNL-13&timerange=3600&tail=3600" target="_blank">
+          <img src="znl_aprs.jpg" alt="znlAprs"
+               style="width: 150px; border-radius: 8px; display: block;">
+          <span style="
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            white-space: nowrap;
+          ">VU3ZNL-13</span>
+        </a>
+      </div>
+
+      <!-- Thumbnail 2 -->
+      <div style="position: relative; flex-shrink: 0;">
+        <a href="https://aprs.fi/#!z=11&call=a%2FVU3XUW-13&timerange=3600&tail=3600" target="_blank">
+          <img src="xuw_aprs.jpg" alt="xuwAprs"
+               style="width: 150px; border-radius: 8px; display: block;">
+          <span style="
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            white-space: nowrap;
+          ">VU3XUW-13</span>
+        </a>
+      </div>
     </div>
   </div>
+</div>
+
   
 </div>
 
