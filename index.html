@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>THE TULUNAD AMATEUR RADIO RELAY LEAGUE</title>
+
   <style>
+    /* Your CSS starts here */
     * {
       margin: 0;
       padding: 0;
@@ -259,6 +261,60 @@
     display: none;
   }
     }
+
+    .board-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.member-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.member-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border: 2px solid #87cefa;
+}
+
+.member-card h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-roles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #d0d0d0;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.member-card:hover .member-roles {
+  opacity: 1;
+  transform: translateY(0);
+}
+
   </style>
 </head>
 <script>
@@ -325,32 +381,67 @@
     <p>Join a network of passionate HAM operators committed to emergency service, experimentation, and community spirit.</p>
   </section>
 
-  <section id="board" class="section dark">
-    <h2 style=" color: #87cefa;font-size: 1.5rem;margin-bottom: 0.5rem;font-weight: 700;">Board of Directors</h2>
-    <p>Leadership that empowers and connects — our TARRL board members.</p>
-    <div class="board-photos">
-      <div>
-        <img src="https://cdn-bio.qrz.com/z/vu3efz/photo_2024_04_14_13_10_04_jpeg.jpg" alt="Ms. Neil Bruce">
-        <p><strong>Ms. Neil Bruce (VU3EFZ)</strong><br>Managing Trustee & Legal Advisor</p>
-      </div>
-      <div>
-        <img src="https://cdn-bio.qrz.com/w/vu3xuw/IMG_20250511_101243_1_.jpg" alt="Mr H Gopalakrishna Prabhu">
-        <p><strong>Mr H Gopalakrishna Prabhu (VU3XUW)</strong><br>Treasurer & Trustee, TARRL</p>
-      </div>
-      <div>
-        <img src="https://cdn-bio.qrz.com/l/vu3znl/IMG_20240827_224019_350.jpg" alt="Vaibhav V K Naik">
-        <p><strong>VAIBHAV V K NAIK (VU3ZNL)</strong><br>President, TARRL</p>
-      </div>
-      <div>
-        <img src="jeevan.jpg" alt="Jeevan Mathew">
-        <p><strong>Jeevan Mathew</strong><br>Interim Secretary, TARRL</p>
-      </div>
-      <div>
-        <img src="https://cdn-bio.qrz.com/e/vu3zne/Screenshot_2024_01_30_164444.png" alt="Mr Parth Darade">
-        <p><strong>Mr Parth Darade (VU3ZNE)</strong><br>Board Member & E&TW Assistant</p>
-      </div>
+<section id="board" class="section dark">
+  <h2 style="color: #87cefa; font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 700; text-align: center;">
+    Board of Directors
+  </h2>
+  <p style="text-align: center; color: #f0f0f0; margin-bottom: 2rem;">
+    Leadership that empowers and connects — our TARRL board members.
+  </p>
+
+  <div class="board-grid">
+
+    <!-- Member 1 -->
+    <div class="member-card">
+      <img src="https://cdn-bio.qrz.com/z/vu3efz/photo_2024_04_14_13_10_04_jpeg.jpg" alt="Ms. Neil Bruce">
+      <h4>Ms. Neil Bruce (VU3EFZ)</h4>
+      <ul class="member-roles">
+        <li>Managing Trustee</li>
+        <li>Legal Advisor</li>
+      </ul>
     </div>
-  </section>
+
+    <!-- Member 2 -->
+    <div class="member-card">
+      <img src="https://cdn-bio.qrz.com/w/vu3xuw/IMG_20250511_101243_1_.jpg" alt="Mr H Gopalakrishna Prabhu">
+      <h4>Mr H Gopalakrishna Prabhu (VU3XUW)</h4>
+      <ul class="member-roles">
+        <li>Treasurer</li>
+        <li>Trustee</li>
+      </ul>
+    </div>
+
+    <!-- Member 3 -->
+    <div class="member-card">
+      <img src="https://cdn-bio.qrz.com/l/vu3znl/IMG_20240827_224019_350.jpg" alt="Vaibhav V K Naik">
+      <h4>VAIBHAV V K NAIK (VU3ZNL)</h4>
+      <ul class="member-roles">
+        <li>President</li>
+      </ul>
+    </div>
+
+    <!-- Member 4 -->
+    <div class="member-card">
+      <img src="jeevan.jpg" alt="Jeevan Mathew">
+      <h4>Jeevan Mathew</h4>
+      <ul class="member-roles">
+        <li>Interim Secretary</li>
+      </ul>
+    </div>
+
+    <!-- Member 5 -->
+    <div class="member-card">
+      <img src="https://cdn-bio.qrz.com/e/vu3zne/Screenshot_2024_01_30_164444.png" alt="Mr Parth Darade">
+      <h4>Mr Parth Darade (VU3ZNE)</h4>
+      <ul class="member-roles">
+        <li>Board Member</li>
+        <li>E&TW Assistant</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
 
   <section id="activities" class="section">
     <h2 style=" color: #1e3a8a;font-size: 1.5rem;margin-bottom: 0.5rem;font-weight: 700;">Activities</h2>
