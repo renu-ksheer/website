@@ -367,7 +367,7 @@
       background: rgba(0, 0, 0, 0.6);
       color: white;
       padding: 4px 8px;
-      font-size: 0.6rem;
+      font-size: 0.9rem;
       border-radius: 4px;
     ">Click to view</span>
   </a>
@@ -380,14 +380,18 @@
 
 <h4>📍APRS Wx stations on air !  </h4> <br>
 
-<div style="flex: 1; min-width: 250px;">
-  <p style="color: #333; font-size: 1rem; line-height: 1.6;">
-    🌈 Vital and Puttur Wx Stations got <strong>on air</strong> 🚨
-  </p>
+<div style="display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; align-items: flex-start;">
 
-  <!-- Thumbnails side by side -->
-  <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-    <!-- First thumbnail -->
+  <!-- Text (left side) -->
+  <div style="flex: 1; min-width: 250px;">
+    <p style="color: #333; font-size: 1rem; line-height: 1.6;">
+      🌈 Vital and Puttur Wx Stations got <strong>on air</strong> 🚨
+    </p>
+  </div>
+
+  <!-- Thumbnails (right side) -->
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-end;">
+    <!-- Thumbnail 1 -->
     <div style="position: relative; flex-shrink: 0;">
       <a href="https://aprs.fi/#!z=11&call=a%2FVU3ZNL-13&timerange=3600&tail=3600" target="_blank">
         <img src="znl_aprs.jpg" alt="znlAprs"
@@ -402,11 +406,12 @@
           padding: 4px 8px;
           font-size: 0.8rem;
           border-radius: 4px;
+          white-space: nowrap;
         ">VU3ZNL-13</span>
       </a>
     </div>
 
-    <!-- Second thumbnail -->
+    <!-- Thumbnail 2 -->
     <div style="position: relative; flex-shrink: 0;">
       <a href="https://aprs.fi/#!z=11&call=a%2FVU3XUW-13&timerange=3600&tail=3600" target="_blank">
         <img src="xuw_aprs.jpg" alt="xuwAprs"
@@ -421,10 +426,12 @@
           padding: 4px 8px;
           font-size: 0.8rem;
           border-radius: 4px;
+          white-space: nowrap;
         ">VU3XUW-13</span>
       </a>
     </div>
   </div>
+  
 </div>
 
 <br>
