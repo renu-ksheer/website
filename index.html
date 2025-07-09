@@ -45,8 +45,9 @@
 
     .logo {
   width: 30vw;        /* Scales based on screen width */
-  max-width: 200px;   /* Prevents it from getting too big on large screens */
-  height: auto;       /* Keeps aspect ratio */
+  max-width: 180px;   /* Prevents it from getting too big on large screens */
+  min-width: 100px;
+      height: auto;       /* Keeps aspect ratio */
       margin-bottom: 1rem;
     }
 
@@ -259,6 +260,23 @@
     }
   </style>
 </head>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('nav-links');
+    menu.classList.toggle('active');
+  }
+
+  // Close menu when link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('nav-links');
+      if (window.innerWidth < 768) {
+        menu.classList.remove('active');
+      }
+    });
+  });
+</script>
+
 <body>
 
 <header class="mobile-header">
