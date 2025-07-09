@@ -347,15 +347,38 @@
 
     <!-- banner pic -->
 
-    <!-- Thumbnail image -->
-<img src="banner-1.png" alt="Preview" class="clickable-img" onclick="openImageModal(this.src)">
+<!-- Card Wrapper -->
+<div style="
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+">
 
-<!-- Modal image viewer -->
+  <!-- Heading -->
+  <h2 style="margin-bottom: 1rem; color: #333;">
+    Treasurer and President hold the banner high!
+  </h2>
+
+  <!-- Clickable Thumbnail Image -->
+  <img src="banner-1.png" alt="Banner Ceremony"
+       class="clickable-img" onclick="openImageModal(this.src)">
+
+</div>
+
+<!-- Modal Fullscreen Viewer -->
 <div id="imageModal" class="image-modal" onclick="closeImageModal()">
   <span class="close-btn">&times;</span>
   <img id="fullImage" class="modal-content">
 </div>
 
+<!-- Styles -->
 <style>
   .clickable-img {
     width: 150px;
@@ -397,6 +420,7 @@
   }
 </style>
 
+<!-- Script -->
 <script>
   function openImageModal(src) {
     document.getElementById('fullImage').src = src;
@@ -407,6 +431,7 @@
     document.getElementById('imageModal').style.display = 'none';
   }
 </script>
+
 
     
     
