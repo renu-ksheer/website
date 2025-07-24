@@ -751,17 +751,46 @@ background: linear-gradient(to right, #e63946, #f97316);
       <p style="color: #d2cccd;">Shri Devaki Krishna House, Kemminje Koornadaka, Darbe, Puttur - 574202</p>
       <p style="color: #d2cccd;">☎️: +91-08251425009</p>
 
-<section class="section" class="section dark">
-  <h3 style="color: #1e3a8a;">⏰ Operating Hours</h3>
-  <ul style="list-style-type: none; padding: 0; line-height: 1.6;">
-    <li><strong>Monday to Friday:</strong> 6:00 PM – 10:00 PM</li>
-    <li><strong>Saturday:</strong> 3:00 PM – 10:00 PM</li>
-    <li><strong>Sunday:</strong> 10:00 AM – 10:00 PM</li>
-  </ul>
-  <p style="font-size: 0.95rem; color: #555;">
-    <em>Note: Time may vary depending on circumstances.</em>
-  </p>
-</section>
+      <!-- Modal Popup -->
+<div id="hoursModal" style="
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+">
+  <div style="
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  ">
+    <h3 style="color: #1e3a8a;">⏰ Operating Hours</h3>
+    <ul style="list-style: none; padding: 0; line-height: 1.6; font-size: 1rem; color: #333;">
+      <li><strong>Monday to Friday:</strong> 6:00 PM – 10:00 PM</li>
+      <li><strong>Saturday:</strong> 3:00 PM – 10:00 PM</li>
+      <li><strong>Sunday:</strong> 10:00 AM – 10:00 PM</li>
+    </ul>
+    <p style="font-size: 0.9rem; color: #666;">
+      <em>Note: Time may vary depending on circumstances.</em>
+    </p>
+    <button onclick="closeModal()" style="
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    ">Close</button>
+  </div>
+</div>
+
       
       <p style="color: #e63946;">Email Contacts:</p>
       <a style="color: #d2cccd; href="mailto:custodian@tarrltulunadu.in"><span style="color: #d5a6bd;">Custodian:</span> custodian@tarrltulunadu.in / tarrltulunadu@gmail.com</a>
