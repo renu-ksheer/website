@@ -362,6 +362,10 @@
 </script>
 
 <body>
+<p id="local-time" style="color: #d2cccd; font-size: 1rem;"></p>
+<p id="utc-time" style="color: #d2cccd; font-size: 1rem;"></p>
+
+  
 
 <header class="mobile-header">
   <div class="top-bar">
@@ -842,6 +846,45 @@ background: linear-gradient(to right, #e63946, #f97316);
     }
   </script>
 
+<script>
+  function updateTimes() {
+    const now = new Date();
+
+    // Format for local time in 24-hour format
+    const localOptions = {
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+      timeZoneName: 'short'
+    };
+
+    // Format for UTC time
+    const utcOptions = {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+      timeZone: 'UTC',
+      timeZoneName: 'short'
+    };
+
+    document.getElementById("local-time").innerHTML =
+      `<strong>Local Time:</strong> ${now.toLocaleString('en-IN', localOptions)}`;
+
+    document.getElementById("utc-time").innerHTML =
+      `<strong>UTC Time:</strong> ${now.toLocaleTimeString('en-GB', utcOptions)}`;
+  }
+
+  setInterval(updateTimes, 1000);
+  updateTimes();
+</script>
+
+  
 </body>
 </html>
 
