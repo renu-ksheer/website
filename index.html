@@ -630,7 +630,7 @@ background: linear-gradient(to right, #e63946, #f97316);
     <!-- Text on the left -->
     <div style="flex: 1; min-width: 250px;">
       <p style="color: #333; font-size: 1rem; line-height: 1.6;">
-         <h3 style="color: #006d77; margin-bottom: 0.5rem;">📌 Event Announcement:</h3></p>
+         <h3 style="color: #006d77; margin-bottom: 0.5rem;">📌 Announcement:</h3></p>
         <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
         We are pleased to announce that the club has received official permission to conduct an Amateur Radio Demonstration as part of <strong>Philo Prathiba</strong> and <strong>JOTA-JOTI 2025</strong>.<br><br>
         Join us to explore the exciting world of ham radio and experience live demonstrations!
@@ -753,12 +753,106 @@ background: linear-gradient(to right, #e63946, #f97316);
       text-align: center;
       max-width: 90%;
   ">
-    <h3 style="color: #e63946;">VU3JBA , Will represent IARU region-3 in 22nd ARDF Championships Birštonas-Lithuania </h3>
+    <h3 style="color: #16537e;">VU3JBA , Will represent IARU region-3 in 22<sup>nd</sup>sup> ARDF Championships Birštonas-Lithuania </h3>
     <img src="vu3jba.jpg" alt="Popup Image" style="width: 200px; max-width: 100%; height: auto;">
     <p style="margin-top: 1rem;">TARRL extends its best wishes ! </p>
     <button onclick="closePopup()" style="margin-top: 1rem;">Close</button>
   </div>
 </div>
+
+
+<!-- ARDF -->
+    <!-- Card Wrapper -->
+<div style="
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+">
+
+  <!-- Text Block (Left) -->
+  <div style="flex: 1; min-width: 250px;">
+    <h3 style="margin-bottom: 1rem; color: #333;">
+📌 22<sup>nd</sup>sup> IARU World ARDF Championships:
+    </h3>
+    <p style="font-size: 0.95rem; color: #555; line-height: 1.6;">
+      VU3JBA , Will represent IARU region-3 in 22<sup>nd</sup>sup> ARDF Championships in Birštonas-Lithuania
+    </p>
+  </div>
+
+  <!-- Clickable Thumbnail (Right) -->
+  <div style="flex-shrink: 0;">
+    <img src="vu3jba.jpg" alt="Banner Ceremony"
+         class="clickable-img" onclick="openImageModal(this.src)"
+         style="width: 150px; border-radius: 8px; cursor: pointer; transition: 0.3s;">
+    <p style="text-align: center; font-size: 0.85rem; color: #333; margin-top: 0.5rem;">Click to enlarge</p>
+  </div>
+</div>
+
+<!-- Modal Fullscreen Viewer -->
+<div id="imageModal" class="image-modal" onclick="closeImageModal()">
+  <span class="close-btn">&times;</span>
+  <img id="fullImage" class="modal-content">
+</div>
+
+<style>
+  .image-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  function openImageModal(src) {
+    document.getElementById('fullImage').src = src;
+    document.getElementById('imageModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeImageModal() {
+    document.getElementById('imageModal').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+</script>
+
+    
+
+
+
+    
 
     
     
@@ -930,6 +1024,7 @@ background: linear-gradient(to right, #e63946, #f97316);
 
  <!--
       <!-- Modal Popup -->
+
 
 
 
